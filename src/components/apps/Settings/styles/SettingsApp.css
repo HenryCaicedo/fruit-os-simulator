@@ -1,0 +1,15 @@
+.test {
+    font: 100%/1.5 sans-serif;
+    color: black;
+}
+
+.screen-container{
+    height: calc(100vh - 15rem);
+    width: calc(3/4 * (100vh - 15rem));
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background-color: #d2d4dd;
+    background-image: linear-gradient(90deg, transparent 30%, rgba(0, 0, 0, 0.02) 45%, rgba(0, 0, 0, 0.02) 55%, transparent 70%);
+    background-size: 8px 8px;
+}

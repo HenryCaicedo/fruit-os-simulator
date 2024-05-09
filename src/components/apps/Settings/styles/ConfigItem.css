@@ -1,33 +1,77 @@
-h1 {
-    font-size: 1.5rem;
-    font-weight: 550;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .parent {
     display: flex;
 }
 
-.icon-container {
-    background-color: blueviolet;
-    width: 2.5rem;
-    height: 2.5rem;
-    margin: 0.8rem;
-    border-radius: 9px;
-}
-
-.switch-container {
-    background-color: blueviolet;
-    width: 5rem;
-    height: 2.5rem;
-    margin: 0.8rem;
-    border-radius: 12px;
+.icon{
+    color: #7b7b7b;
+    width: 30px;
+    height: 30px;
+    stroke-width: 3px;
 }
 
 .main-container {
     display: flex;
     justify-content: space-between;
+    border-bottom: 2px solid #00000030;
+    border-top: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.9rem;
+}
+
+.main-container:last-child {
+    border-bottom: none;
+}
+
+.main-container:first-child {
+    border-top: none;
+}
+
+h1 {
+    font-size: 1.4rem;
+    font-weight: 550;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.icon-container {
+    background-color: rgba(169, 169, 169, 0.7);
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 0.65rem;
+    border-radius: 8px;
+}
+
+.switch-container {
+    background-color: rgba(169, 169, 169, 0.7);
+    width: 5rem;
+    height: 2.5rem;
+    border-radius: 20px;
+}
+
+/* HOVER */
+.main-container:hover {
+    background: linear-gradient(#b9b9b931, #79797911);
+}
+
+/* CLICKED */
+.main-container:active {
+    background: linear-gradient(#0583F2, #0267E9);
+}
+
+
+.main-container:active h1 {
+    color: white;
+    text-shadow: #333333b9 0px -1.5px 0px;
+
+}
+
+
+.main-container:active .icon {
+    color: white;
+    text-shadow: #333333b9 0px -1.5px 0px;
 }

@@ -1,4 +1,5 @@
 import './styles/ConfigItem.css';
+import { ChevronRight } from 'lucide-react';
 
 interface ConfigItemProps {
   children: React.ReactNode
@@ -15,11 +16,15 @@ export default function ConfigItem({ children, isSwitch }: ConfigItemProps) {
           {children}
         </h1>
       </div>
-      {isSwitch &&
+      {isSwitch ? (
         <div className='switch-container'>
           <div className='switch'></div>
         </div>
-      }
+      ) : (
+        <div>
+          <ChevronRight className='icon' />
+        </div>
+      )}
     </div>
   )
 }
