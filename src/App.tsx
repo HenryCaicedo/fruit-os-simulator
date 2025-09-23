@@ -1,6 +1,6 @@
 import SettingsApp from './components/apps/Settings/SettingsApp'
 import './App.css'
-import Navbar from './components/apps/Settings/Navbar'
+import AppIcon from './components/ui/AppIcon/AppIcon'
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      height: 'calc(100vh - 100px)', // Adjust the value as needed
+      height: 'calc(100vh - 100px)',
     }}>
       <div className='phone'>
         <SettingsApp />

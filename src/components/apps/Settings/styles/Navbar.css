@@ -1,4 +1,4 @@
-.background {
+.navbar-bg {
     background: linear-gradient(#beccdd, #5a7498);
     color: white;
     padding: 12px;
@@ -10,10 +10,11 @@
         0 1px 2px 0px rgba(0, 0, 0, 0.3);
 }
 
-.background h1 {
+.navbar-bg h1 {
     font-size: 1.8rem;
     font-weight: 600;
     margin: 0;
     text-shadow: #333333b9 0px -1.5px 0px;
-
 }
+
+

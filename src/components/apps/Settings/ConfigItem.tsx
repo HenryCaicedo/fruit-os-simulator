@@ -1,17 +1,20 @@
 import './styles/ConfigItem.css';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, BoxSelect } from 'lucide-react';
+import SettingsIcon from './SettingsIcon';
 
 interface ConfigItemProps {
   children: React.ReactNode
   isSwitch?: boolean
+  icon?: React.ReactNode
 }
 
 
-export default function ConfigItem({ children, isSwitch }: ConfigItemProps) {
+export default function ConfigItem({ children, isSwitch, icon }: ConfigItemProps) {
   return (
     <div className='main-container'>
       <div className='parent'>
-        <div className='icon-container'></div>
+        <div className='settings-icon-container'>
+        </div>
         <h1>
           {children}
         </h1>
