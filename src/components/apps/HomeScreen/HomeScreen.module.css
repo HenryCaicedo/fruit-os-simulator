@@ -1,0 +1,15 @@
+.iconsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    box-sizing: border-box;
+    flex: 1;
+    padding: 1rem 0.5rem;
+}
+
+.homeScreen {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}

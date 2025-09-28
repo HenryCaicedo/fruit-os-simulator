@@ -1,0 +1,37 @@
+[
+    [
+        { "label": "Airplane Mode", "isSwitch": true, "route": "airplane-mode" },
+        { "label": "Wi-Fi", "route": "wifi" },
+        { "label": "Bluetooth", "route": "bluetooth" },
+        { "label": "Personal Hotspot", "route": "personal-hotspot" },
+        { "label": "VPN", "route": "vpn" }
+    ],
+    [
+        { "label": "Do Not Disturb", "isSwitch": true, "route": "do-not-disturb" },
+        { "label": "Notifications", "route": "notifications" }
+    ],
+    [
+        { "label": "General", "isSwitch": true, "route": "general" },
+        { "label": "Sounds", "route": "sounds" },
+        { "label": "Brightness & Wallpaper", "route": "brightness-wallpaper" },
+        { "label": "Picture Frame", "route": "picture-frame" },
+        { "label": "Privacy", "route": "privacy" }
+        
+    ],
+    [
+        { "label": "iCloud", "route": "cloud" },
+        { "label": "Mail, Contacts, Calendars", "route": "mail-contacts-calendars" },
+        { "label": "Notes", "route": "notes" },
+        { "label": "Reminders", "route": "reminders" },
+        { "label": "Messages", "route": "messages" },
+        { "label": "Videocall", "route": "videocall" },
+        { "label": "Browser", "route": "browser" }
+    ],
+    [
+        { "label": "App Store", "route": "app-store" },
+        { "label": "Music", "route": "music" },
+        { "label": "Video", "route": "video" },
+        { "label": "Photos & Camera", "route": "photos-camera" },
+        { "label": "Books", "route": "books" }
+    ]
+]

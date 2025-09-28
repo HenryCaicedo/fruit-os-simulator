@@ -1,0 +1,32 @@
+.navbar-template {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.screen-container {
+    flex: 1;
+    /* take all available space below the navbar */
+    overflow-y: auto;
+    /* scroll only the content */
+    scrollbar-width: none;
+    /* Firefox hide scrollbar */
+    -ms-overflow-style: none;
+    /* IE/Edge hide scrollbar */
+    background-color: #d2d4dd;
+    background-image: linear-gradient(90deg,
+            transparent 30%,
+            rgba(0, 0, 0, 0.02) 45%,
+            rgba(0, 0, 0, 0.02) 55%,
+            transparent 70%);
+    background-size: 8px 8px;
+    padding: 0.8rem 0.5rem;
+
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+    /* make scrollbar transparent */
+}

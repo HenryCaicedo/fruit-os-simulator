@@ -1,4 +1,4 @@
-import './styles/Navbar.css'
+import './Navbar.css'
 
 interface NavbarProps {
     children: string

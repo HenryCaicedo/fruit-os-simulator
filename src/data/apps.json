@@ -1,0 +1,92 @@
+{
+    "pages": [
+        [
+            {
+                "name": "Messages",
+                "icon": "Messages",
+                "route": "messages",
+                "applyMask": false
+            },
+            {
+                "name": "Settings",
+                "icon": "Settings",
+                "route": "settings",
+                "applyMask": false
+            },
+            {
+                "name": "Weather",
+                "icon": "Weather",
+                "route": "weather",
+                "applyMask": false
+            },
+            {
+                "name": "Camera",
+                "icon": "Camera",
+                "route": "camera",
+                "applyMask": false
+            },
+            {
+                "name": "Videos",
+                "icon": "Videos",
+                "route": "videos",
+                "applyMask": false
+            },
+            {
+                "name": "Photos",
+                "icon": "Images",
+                "route": "photos",
+                "applyMask": false
+            },
+            {
+                "name": "Passbook",
+                "icon": "Passbook",
+                "route": "passbook",
+                "applyMask": false
+            },
+            {
+                "name": "Calculator",
+                "icon": "Calculator",
+                "route": "calculator",
+                "applyMask": false
+            },
+            {
+                "name": "Notes",
+                "icon": "Notes",
+                "route": "notes",
+                "applyMask": false
+            },
+            {
+                "name": "Maps",
+                "icon": "Maps",
+                "route": "maps",
+                "applyMask": false
+            }
+        ]
+    ],
+    "dock": [
+        {
+            "name": "Phone",
+            "icon": "Phone",
+            "route": "phone",
+            "applyMask": false
+        },
+        {
+            "name": "Mail",
+            "icon": "Mail",
+            "route": "mail",
+            "applyMask": false
+        },
+        {
+            "name": "Safari",
+            "icon": "Browser",
+            "route": "browser",
+            "applyMask": false
+        },
+        {
+            "name": "Music",
+            "icon": "Music",
+            "route": "music",
+            "applyMask": false
+        }
+    ]
+}

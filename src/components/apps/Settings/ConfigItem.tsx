@@ -14,6 +14,7 @@ export default function ConfigItem({ children, isSwitch, icon }: ConfigItemProps
     <div className='main-container'>
       <div className='parent'>
         <div className='settings-icon-container'>
+          
         </div>
         <h1>
           {children}

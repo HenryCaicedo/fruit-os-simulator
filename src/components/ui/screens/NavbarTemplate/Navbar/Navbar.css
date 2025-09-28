@@ -1,7 +1,7 @@
 .navbar-bg {
     background: linear-gradient(#beccdd, #5a7498);
     color: white;
-    padding: 12px;
+    padding: 8px;
     text-align: center;
     position: sticky;
     top: 0;
@@ -11,10 +11,10 @@
 }
 
 .navbar-bg h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 600;
     margin: 0;
-    text-shadow: #333333b9 0px -1.5px 0px;
+    text-shadow: #333333b9 0px -1.6px 0px;
 }
 
 

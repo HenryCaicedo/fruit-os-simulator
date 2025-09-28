@@ -8,9 +8,9 @@ export default function SettingsIcon() {
       <div className='settings-icon-top-gradient'>
       </div>
       <div className='settings-icon-bottom-gradient'>
-      </div>      
+      </div>
       <div className='settings-icon-icon-container'>
-        <Cloud size='70%' color="#ffffff"/>
+        <Cloud size='70%' color="#ffffff" />
       </div>
       <div className='settings-icon-top-layer'>
 

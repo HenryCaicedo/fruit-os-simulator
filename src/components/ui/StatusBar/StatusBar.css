@@ -1,0 +1,35 @@
+.status-bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* Three equal columns */
+  align-items: center;
+  font-size: 1rem;
+  opacity: 0.7;
+  padding: 0 6px;
+  color: white;
+  font-weight: 550;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  text-shadow: #333333b9 0px -1px 0px;
+}
+
+.status-bar-height {
+  height: 25px;
+}
+
+.status-bar span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.carrier {
+  justify-self: start;
+}
+
+.time {
+  justify-self: center;
+}
+
+.battery {
+  justify-self: end;
+}
