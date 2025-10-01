@@ -16,6 +16,7 @@ import videosImg from '../../../assets/appIcons/videos.png';
 import mapsImg from '../../../assets/appIcons/maps.png';
 import weatherImg from '../../../assets/appIcons/weather.png';
 import passbookImg from '../../../assets/appIcons/passbook.png';
+import contactsImg from '../../../assets/appIcons/contacts.png';
 
 
 
@@ -163,6 +164,15 @@ export const IconsMap: Record<string, IconsMapData> = {
             <img
                 src={passbookImg}
                 alt="Passbook"
+                style={photoStyle}
+            />
+        )
+    },
+    Contacts: {
+        display: (
+            <img
+                src={contactsImg}
+                alt="Contacts"
                 style={photoStyle}
             />
         )

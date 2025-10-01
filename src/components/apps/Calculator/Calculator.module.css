@@ -1,0 +1,121 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background: url("./assets/leather.png");
+    background-repeat: repeat;   
+    background-size: auto;       
+    display: flex;
+    flex-direction: column;
+    background-size: 100px 100px;
+}
+
+
+.display {
+    height: 110px;
+    background: linear-gradient(#EBECDC, #D5D9B8, #E3E6CF);
+    font-size: 2rem;
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 16px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    overflow-x: auto;
+        position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 -2px 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+.display span {
+    font-size: 5rem;
+    z-index: 1;
+    font-family: 'DS-Digital', sans-serif;
+}
+
+.display::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.buttonsWrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-radius: 30px;
+    flex: 1;
+    gap: 24px 14px;
+    padding: 15px;
+}
+
+.button.equals {
+    grid-row-start: 5;
+    grid-row-end: 7;
+    grid-column-start: 4;
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.button.zero {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    text-align: left;
+    padding-left: 20%;
+}
+
+.button {
+    background: black;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 7px;
+    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0.8px 1px 0px rgba(255, 255, 255, 0.2), inset 0 1px 1px 0 white;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 0 -1.2px 0.5px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    border-bottom-left-radius: 50px 6px;
+    border-bottom-right-radius: 50px 6px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.05));
+}
+
+.button:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.button.gray {
+    background: #60666A;
+}
+
+.button.brown {
+    background: #69574D;
+}
+
+.button.orange {
+    background: #F37D1A;
+}

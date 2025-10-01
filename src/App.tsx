@@ -5,12 +5,16 @@ import AppIcon from "./components/ui/AppIcon/AppIcon";
 import StatusBar from "./components/ui/StatusBar/StatusBar";
 import HomeScreen from "./components/apps/HomeScreen/HomeScreen";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import Phone from "./components/Phone";
+import PhoneComponent from "./components/apps/Phone/Phone";
+import AppInProgress from "./components/apps/AppInProgress/AppInProgress";
+import Calculator from "./components/apps/Calculator/Calculator";
 
 function AppContent() {
   const location = useLocation();
 
   return (
-    <div className="phone">
+    <Phone>
       <div className="screen">
         <div className="status-bar-container">
           <StatusBar />
@@ -26,12 +30,15 @@ function AppContent() {
               <Route path="/" element={<HomeScreen />} />
               <Route path="/settings" element={<SettingsApp />} />
               <Route path="/app-icon" element={<AppIcon />} />
-              <Route path="*" element={<AppIcon />} />
+              <Route path="/phone" element={<PhoneComponent />} />
+              <Route path="/contacts" element={<PhoneComponent isContacts={true} />} />
+              <Route path="/calculator" element={<Calculator />} />
+              <Route path="*" element={<AppInProgress />} />
             </Routes>
           </CSSTransition>
         </TransitionGroup>
       </div>
-    </div>
+    </Phone>
   );
 }
 

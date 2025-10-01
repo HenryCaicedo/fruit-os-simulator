@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles/SettingsIcon.css'
+import '../styles/SettingsIcon.css'
 import { Cloud } from 'lucide-react'
 
 export default function SettingsIcon() {

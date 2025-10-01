@@ -25,7 +25,9 @@ export default function StatusBar() {
   return (
     <div className="status-bar status-bar-height">
       <span className="carrier">
+        {/*
         <Signal size={16} style={{ verticalAlign: "middle", marginRight: 4 }} />
+        */}
         No Service
         <Wifi size={16} style={{ verticalAlign: "middle", marginRight: 4 }} />
       </span>
@@ -33,7 +35,9 @@ export default function StatusBar() {
         {time}
       </span>
       <span className="battery">
-        81%
+        {`${Math.round(
+          ((24 * 60 - (new Date().getHours() * 60 + new Date().getMinutes())) / (24 * 60)) * 100
+        )}%`}
         <Battery size={24} style={{ verticalAlign: "middle", marginRight: 4 }} />
       </span>
     </div>

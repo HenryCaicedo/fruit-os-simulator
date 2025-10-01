@@ -1,14 +1,3 @@
-.phone {
-    width: 390px;
-    height: 585px;
-    border: 16px black solid;
-    border-top: 115px black solid;
-    border-bottom: 115px black solid;
-    border-radius: 50px;
-    background: url('src/assets/wallpaper.jpg') center center / cover no-repeat;
-    overflow: hidden;
-}
-
 .screen {
     position: relative;
     width: 100%;

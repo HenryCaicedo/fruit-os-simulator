@@ -1,6 +1,6 @@
 .status-bar {
   display: grid;
-  grid-template-columns: 1fr auto 1fr; /* Three equal columns */
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   font-size: 1rem;
   opacity: 0.7;

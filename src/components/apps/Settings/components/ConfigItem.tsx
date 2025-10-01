@@ -1,4 +1,4 @@
-import './styles/ConfigItem.css';
+import '../styles/ConfigItem.css';
 import { ChevronRight, BoxSelect } from 'lucide-react';
 import SettingsIcon from './SettingsIcon';
 

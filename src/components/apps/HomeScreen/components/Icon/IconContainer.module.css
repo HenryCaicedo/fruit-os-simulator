@@ -4,7 +4,23 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
 }
+
+.editAnimation {
+    animation: bounce 0.13s infinite alternate ease-in-out;
+    animation-delay: var(--animation-delay, 0s);
+}
+
+@keyframes bounce {
+    from {
+        transform: rotate(-1.7deg);
+    }
+    to {
+        transform: rotate(1.7deg);
+    }
+}
+
 
 .iconWrapper {
     position: relative;
@@ -21,7 +37,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -54,4 +70,33 @@
 /* Scale effect on hover */
 .iconWrapper:hover .icon {
     transform: scale(1.02);
+}
+
+.uninstallButton {
+    position: absolute;
+    top: -8px;
+    left: 3px;
+    width: 22px;
+    height: 22px;
+    background-color: rgb(28, 23, 23);
+    color: white;
+    border: white 2px solid;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.uninstallIcon {
+    pointer-events: none;
+    user-select: none;
+    font-weight: bold;
+    color: white;
+    width: 14px;
+    height: 14px;
+    stroke-width: 5px;
 }

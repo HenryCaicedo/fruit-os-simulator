@@ -1,9 +1,9 @@
-import Section from "./Section";
-import ConfigItem from "./ConfigItem";
+import Section from "../../ui/Section/Section";
+import ConfigItem from "./components/ConfigItem";
 import "./styles/SettingsApp.css";
 import { SettingsSection } from "../../../models/SettingsSection";
 import NavbarTemplate from "../../ui/screens/NavbarTemplate/NavbarTemplate";
-import settingsMain from "../../../data/settingsMain.json";
+import settingsMain from "../../../assets/data/settingsMain.json";
 
 export default function SettingsApp() {
 

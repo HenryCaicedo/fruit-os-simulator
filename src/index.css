@@ -6,9 +6,14 @@
   align-items: center;
 }
 
-
 a {
   text-decoration: none;
   color: inherit;
-  cursor: default; /* remove pointer */
+  cursor: default;
+}
+
+body, * {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }

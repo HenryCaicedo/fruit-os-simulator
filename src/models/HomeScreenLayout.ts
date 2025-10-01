@@ -5,3 +5,8 @@ export interface HomeScreenAppDTO {
     route: string;
     applyMask?: boolean;
 }
+
+export interface HomeScreenLayout {
+    pages: HomeScreenAppDTO[][];
+    dock: HomeScreenAppDTO[];
+}

@@ -60,6 +60,12 @@
                 "icon": "Maps",
                 "route": "maps",
                 "applyMask": false
+            },
+            {
+                "name": "Contacts",
+                "icon": "Contacts",
+                "route": "contacts",
+                "applyMask": false
             }
         ]
     ],
