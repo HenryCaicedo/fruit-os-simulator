@@ -4,6 +4,7 @@ export interface HomeScreenAppDTO {
     color?: string;
     route: string;
     applyMask?: boolean;
+    url?: string;
 }
 
 export interface HomeScreenLayout {

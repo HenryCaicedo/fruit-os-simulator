@@ -85,8 +85,40 @@ export default function HomeScreen() {
                 {layout.pages[0].map((app: HomeScreenAppDTO) => {
                     const iconData = IconsMap[app.icon] ?? null;
 
-                    return (
+                    const iconElement = (
+                        <IconContainer key={app.name} label={app.name} editMode={editMode}>
+                            <AppIcon
+                                color={app.color}
+                                icon={iconData?.display}
+                                applyMask={app.applyMask}
+                            />
+                        </IconContainer>
+                    );
+
+                    return app.url ? (
+                        <a
+                            href={app.url}
+                            key={app.name}
+                            data-is-icon="true"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {iconElement}
+                        </a>
+                    ) : (
                         <Link to={app.route} key={app.name} data-is-icon="true">
+                            {iconElement}
+                        </Link>
+                    );
+                })}
+            </div>
+
+            <Paginator />
+            <Dock>
+                {layout.dock.map((app: HomeScreenAppDTO) => {
+                    const iconData = IconsMap[app.icon] ?? null;
+                    return app.url ? (
+                        <a href={app.url} key={app.name} data-is-icon="true" target="_blank" rel="noopener noreferrer">
                             <IconContainer key={app.name} label={app.name} editMode={editMode}>
                                 <AppIcon
                                     color={app.color}
@@ -94,15 +126,8 @@ export default function HomeScreen() {
                                     applyMask={app.applyMask}
                                 />
                             </IconContainer>
-                        </Link>
-                    );
-                })}
-            </div>
-            <Paginator />
-            <Dock>
-                {layout.dock.map((app: HomeScreenAppDTO) => {
-                    const iconData = IconsMap[app.icon] ?? null;
-                    return (
+                        </a>
+                    ) : (
                         <Link to={app.route} key={app.name} data-is-icon="true">
                             <IconContainer key={app.name} label={app.name} editMode={editMode}>
                                 <AppIcon

@@ -66,6 +66,13 @@
                 "icon": "Contacts",
                 "route": "contacts",
                 "applyMask": false
+            },
+            {
+                "name": "GitHub",
+                "icon": "GitHub",
+                "route": "github",
+                "applyMask": false,
+                "url": "https://github.com/HenryCaicedo/fruit-os-simulator"
             }
         ]
     ],

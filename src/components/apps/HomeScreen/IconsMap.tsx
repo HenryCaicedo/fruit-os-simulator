@@ -17,7 +17,7 @@ import mapsImg from '../../../assets/appIcons/maps.png';
 import weatherImg from '../../../assets/appIcons/weather.png';
 import passbookImg from '../../../assets/appIcons/passbook.png';
 import contactsImg from '../../../assets/appIcons/contacts.png';
-
+import githubImg from '../../../assets/appIcons/github.png';
 
 
 const photoStyle = {
@@ -173,6 +173,15 @@ export const IconsMap: Record<string, IconsMapModel> = {
             <img
                 src={contactsImg}
                 alt="Contacts"
+                style={photoStyle}
+            />
+        )
+    },
+    GitHub: {
+        display: (
+            <img
+                src={githubImg}
+                alt="GitHub"
                 style={photoStyle}
             />
         )
