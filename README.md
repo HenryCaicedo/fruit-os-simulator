@@ -1,13 +1,28 @@
 # FruitOS Simulator
 
 A retro-inspired clone of the classic **iOS 6** operating sysetem, built with **React**.  
-This project recreates the skeuomorphic look of Apple’s old mobile UI, including glossy toggles, rounded list groups, and shiny icon templates.  
+This project recreates the skeuomorphic look of Apple's old mobile UI, including glossy toggles, rounded list groups, and shiny icon templates.  
+
+## 🌐 Live Demo
+**[View Live Demo](https://fruit-os-simulator-6vkkd7lcu-henrycaicedos-projects.vercel.app/)**
 
 So far, the project includes:
 - ✅ **Settings App template** (grouped lists, toggles, navigation chevrons)
 - ✅ **Reusable App Icon template** (with glossy/shiny finish)
 
 ✨ Built for educational and portfolio purposes — not affiliated with Apple.
+
+---mulator
+
+A retro-inspired clone of the classic **iOS 6** operating sysetem, built with **React**.  
+This project recreates the skeuomorphic look of Apple’s old mobile UI, including glossy toggles, rounded list groups, and shiny icon templates.  
+
+So far, the project includes:
+- ✅ **Settings App template** (grouped lists, toggles, navigation chevrons)
+- ✅ **Reusable App Icon template** (with glossy/shiny finish)
+
+✨ Built for educational and portfolio purposes — not affiliated with Apple.  
+All artwork, icons, and design elements inspired by iOS are property of their respective creators and Apple Inc.
 
 ---
 
