@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    background: url('src/assets/wallpaper.jpg') center center / cover no-repeat;
 }
 
 .status-bar-container {
@@ -17,75 +18,5 @@
     z-index: 10;
 }
 
-/* Animation */
-/* Classic iOS 6 zoom animation - Forward navigation */
-.ios6-enter,
-.ios6-enter-active,
-.ios6-exit,
-.ios6-exit-active,
-.ios6-back-enter,
-.ios6-back-enter-active,
-.ios6-back-exit,
-.ios6-back-exit-active {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform-origin: center center;
-}
 
-/* Forward navigation (opening app) */
-.ios6-enter {
-  opacity: 0;
-  transform: scale(0.1);
-  z-index: 1;
-}
 
-.ios6-enter-active {
-  opacity: 1;
-  transform: scale(1);
-  z-index: 1;
-  transition: opacity 300ms ease-out, transform 300ms ease-out;
-}
-
-.ios6-exit {
-  opacity: 1;
-  transform: scale(1);
-  z-index: 0;
-  background-color: black;
-}
-
-.ios6-exit-active {
-  opacity: 0;
-  transform: scale(1.1);
-  z-index: 0;
-  transition: opacity 300ms ease-in, transform 300ms ease-in;
-}
-
-/* Back navigation (closing app) - Inverse animation */
-.ios6-back-enter {
-  opacity: 0;
-  transform: scale(1.1);
-  z-index: 0;
-}
-
-.ios6-back-enter-active {
-  opacity: 1;
-  transform: scale(1);
-  z-index: 0;
-  transition: opacity 300ms ease-in, transform 300ms ease-in;
-}
-
-.ios6-back-exit {
-  opacity: 1;
-  transform: scale(1);
-  z-index: 1;
-}
-
-.ios6-back-exit-active {
-  opacity: 0;
-  transform: scale(0.1);
-  z-index: 1;
-  transition: opacity 300ms ease-out, transform 300ms ease-out;
-}

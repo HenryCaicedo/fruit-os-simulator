@@ -10,19 +10,26 @@ import { HomeScreenAppDTO, HomeScreenLayout } from '../../../models/HomeScreenLa
 import { Link } from 'react-router-dom';
 import { getHomescreenData } from '../../../services/homeScreenService';
 
+// Redux
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState, AppDispatch } from '../../../store/store';
+import { setHomeScreenLayout } from '../../../store/slices/homeScreenSlice';
+
 
 export default function HomeScreen() {
-    const [layout, setLayout] = useState<HomeScreenLayout | null>(null);
+    const layout = useSelector((state: RootState) => state.homeScreen.layout);
+    const dispatch = useDispatch<AppDispatch>();
+
     const [editMode, setEditMode] = useState<boolean>(false);
     const [longPressTimer, setLongPressTimer] = useState<number | null>(null);
 
     useEffect(() => {
         getHomescreenData()
-            .then(setLayout)
+            .then(data => dispatch(setHomeScreenLayout(data)))
             .catch(err => console.error(err));
-    }, []);
+    }, [dispatch]);
 
-    // Cleanup timer on unmount
+    // Cleanup timer on unmount - MUST be before any conditional returns
     useEffect(() => {
         return () => {
             if (longPressTimer) {
@@ -30,6 +37,11 @@ export default function HomeScreen() {
             }
         };
     }, [longPressTimer]);
+
+    // --- Loading check - AFTER all hooks ---
+    if (!layout || layout.pages.length === 0) {
+        return <p>Loading...</p>;
+    }
 
     const handleLongPressStart = (event: React.TouchEvent | React.MouseEvent) => {
         // Check if the target is an icon or its children
@@ -57,9 +69,6 @@ export default function HomeScreen() {
     const handleEditModeExit = () => {
         setEditMode(false);
     };
-
-    if (!layout) return <p>Loading...</p>;
-
 
     return (
         <div

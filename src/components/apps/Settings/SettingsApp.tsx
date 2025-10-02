@@ -1,6 +1,6 @@
 import Section from "../../ui/Section/Section";
 import ConfigItem from "./components/ConfigItem";
-import "./styles/SettingsApp.css";
+import "./SettingsApp.css";
 import { SettingsSection } from "../../../models/SettingsSection";
 import NavbarTemplate from "../../ui/screens/NavbarTemplate/NavbarTemplate";
 import settingsMain from "../../../assets/data/settingsMain.json";

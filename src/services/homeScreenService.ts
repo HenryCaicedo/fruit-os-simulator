@@ -4,7 +4,10 @@ const API_URL = import.meta.env.VITE_API_URL;
 
 export async function getHomescreenData() {
   if (import.meta.env.VITE_USE_LOCAL_DATA === "true") {
-    return localData;
+    // Simulate network delay
+    return new Promise((resolve) => {
+      setTimeout(() => resolve(localData), 0); // 500ms delay
+    });
   }
 
   try {

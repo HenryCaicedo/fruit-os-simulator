@@ -26,13 +26,13 @@ const photoStyle = {
     objectFit: "cover" as const
 };
 
-interface IconsMapData {
+export interface IconsMapModel {
     display: React.ReactNode; // any JSX: Lucide icon, <img>, etc.
     label?: string;
     color?: string;
 }
 
-export const IconsMap: Record<string, IconsMapData> = {
+export const IconsMap: Record<string, IconsMapModel> = {
     Settings: {
         display: (
             <img

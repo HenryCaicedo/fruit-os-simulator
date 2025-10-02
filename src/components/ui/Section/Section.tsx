@@ -3,7 +3,7 @@ import styles from './Section.module.css'
 
 interface SectionProps {
   title?: string
-  children: React.ReactNode
+  children: React.ReactNode,
 }
 
 export default function Section({ title, children }: SectionProps) {

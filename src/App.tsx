@@ -5,27 +5,29 @@ import AppIcon from "./components/ui/AppIcon/AppIcon";
 import StatusBar from "./components/ui/StatusBar/StatusBar";
 import HomeScreen from "./components/apps/HomeScreen/HomeScreen";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import Phone from "./components/Phone";
+import PhoneBody from "./components/PhoneBody";
 import PhoneComponent from "./components/apps/Phone/Phone";
 import AppInProgress from "./components/apps/AppInProgress/AppInProgress";
 import Calculator from "./components/apps/Calculator/Calculator";
+import "./animations/transitions/openingApp.css";
+import "./animations/transitions/closingApp.css";
 
 function AppContent() {
   const location = useLocation();
 
   return (
-    <Phone>
+    <PhoneBody>
       <div className="screen">
         <div className="status-bar-container">
           <StatusBar />
         </div>
 
         <TransitionGroup component={null}>
-          <CSSTransition
+            <CSSTransition
             key={location.pathname}
-            classNames="ios6"
+            classNames="openingApp"
             timeout={300}
-          >
+            >
             <Routes location={location}>
               <Route path="/" element={<HomeScreen />} />
               <Route path="/settings" element={<SettingsApp />} />
@@ -35,10 +37,10 @@ function AppContent() {
               <Route path="/calculator" element={<Calculator />} />
               <Route path="*" element={<AppInProgress />} />
             </Routes>
-          </CSSTransition>
+            </CSSTransition>
         </TransitionGroup>
       </div>
-    </Phone>
+    </PhoneBody>
   );
 }
 

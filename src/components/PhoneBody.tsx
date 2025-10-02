@@ -1,12 +1,11 @@
-import style from './Phone.module.css';
+import style from './PhoneBody.module.css';
 import { Square } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function Phone({ children }: { children: React.ReactNode }) {
+export default function PhoneBody({ children }: { children: React.ReactNode }) {
     return (
         <div className={style.phone}>
-            <div className={`${style.top} ${style.radius} ${style.height}`}>
-                Top
+            <div className={`${style.radius} ${style.height}`}>
             </div>
 
             <div className={style.middle}>
