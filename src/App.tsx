@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import SettingsApp from "./components/apps/Settings/SettingsApp";
 import "./App.css";
+import wallpaperImage from "./assets/wallpaper.jpg";
 import AppIcon from "./components/ui/AppIcon/AppIcon";
 import StatusBar from "./components/ui/StatusBar/StatusBar";
 import HomeScreen from "./components/apps/HomeScreen/HomeScreen";
@@ -17,7 +18,7 @@ function AppContent() {
 
   return (
     <PhoneBody>
-      <div className="screen">
+      <div className="screen" style={{ backgroundImage: `url(${wallpaperImage})` }}>
         <div className="status-bar-container">
           <StatusBar />
         </div>

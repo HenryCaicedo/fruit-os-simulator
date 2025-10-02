@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: url('src/assets/wallpaper.jpg') center center / cover no-repeat;
+    background: center center / cover no-repeat;
 }
 
 .status-bar-container {
