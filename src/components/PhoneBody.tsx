@@ -5,7 +5,11 @@ import { Link } from 'react-router-dom';
 export default function PhoneBody({ children }: { children: React.ReactNode }) {
     return (
         <div className={style.phone}>
-            <div className={`${style.radius} ${style.height}`}>
+            <div className={`${style.radius} ${style.height} ${style.top}`}>
+            {/*
+                <div className={style.camera} /> 
+            */}
+                <div className={style.speaker} />
             </div>
 
             <div className={style.middle}>

@@ -10,6 +10,7 @@ import PhoneBody from "./components/PhoneBody";
 import PhoneComponent from "./components/apps/Phone/Phone";
 import AppInProgress from "./components/apps/AppInProgress/AppInProgress";
 import Calculator from "./components/apps/Calculator/Calculator";
+import Music from "./components/apps/Music/Music";   
 import "./animations/transitions/openingApp.css";
 import "./animations/transitions/closingApp.css";
 

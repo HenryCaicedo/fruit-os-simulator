@@ -14,9 +14,8 @@ interface PhoneProps {
 
 export default function PhoneComponent({ isContacts = false }: PhoneProps) {
     const [query, setQuery] = useState("");
-
+    
     useEffect(() => {
-        console.log("Search query changed:", query);
     }, [query]);
 
     const items = [
