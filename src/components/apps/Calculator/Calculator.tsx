@@ -129,7 +129,7 @@ export default function Calculator() {
                 <button className={styles.button} onClick={() => inputNumber('3')}>3</button>
                 <button className={`${styles.button} ${styles.equals} ${styles.orange}`} onClick={performEquals}>=</button>
                 <button className={`${styles.button} ${styles.zero}`} onClick={() => inputNumber('0')}>0</button>
-                <button className={styles.button} onClick={inputDecimal}></button>
+                <button className={styles.button} onClick={inputDecimal}>.</button>
             </div>
 
         </div>

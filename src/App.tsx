@@ -37,6 +37,7 @@ function AppContent() {
               <Route path="/phone" element={<PhoneComponent />} />
               <Route path="/contacts" element={<PhoneComponent isContacts={true} />} />
               <Route path="/calculator" element={<Calculator />} />
+              <Route path="/music" element={<Music />} />
               <Route path="*" element={<AppInProgress />} />
             </Routes>
             </CSSTransition>

@@ -12,34 +12,26 @@ interface ContactsListProps {
     searchQuery?: string;
 }
 
-export default function ContactsList({ searchQuery: search }: ContactsListProps) {
+export default function ContactsList({ searchQuery }: ContactsListProps) {
     const [contacts, setContacts] = useState<Contact[]>([]);
 
     useEffect(() => {
         getContactsData()
             .then(data => {
-                if (search) {
-                    const filtered = data.filter(
-                        (contact: Contact) =>
-                            `${contact.firstName} ${contact.lastName}`.toLowerCase().includes(search.toLowerCase())
-                    );
-                    setContacts(filtered);
-                } else {
-                    setContacts(data);
-                }
+                setContacts(data);
             })
             .catch(err => console.error(err));
-    }, [search]);
-
-    
+    }, []); 
 
     return (
         <div>
-            <DirectoryList items={contacts.map(contact => ({
-                id: contact.id,
-                label: `${contact.firstName} ${contact.lastName}`
-            }))} />
+            <DirectoryList
+                items={contacts.map(contact => ({
+                    id: contact.id,
+                    label: `${contact.firstName} ${contact.lastName}`
+                }))}
+                searchQuery={searchQuery}
+                />
         </div>
     );
 }
-    

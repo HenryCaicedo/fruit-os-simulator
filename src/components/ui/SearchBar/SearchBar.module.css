@@ -35,3 +35,8 @@
     width: 18px;
     height: 18px;
 }
+
+/* MUSIC APP THEME*/
+.container.music {
+    background: linear-gradient(#e0e1e3, #e0e0e2);
+}

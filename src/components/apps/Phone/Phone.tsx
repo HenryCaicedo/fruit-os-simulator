@@ -15,9 +15,6 @@ interface PhoneProps {
 export default function PhoneComponent({ isContacts = false }: PhoneProps) {
     const [query, setQuery] = useState("");
     
-    useEffect(() => {
-    }, [query]);
-
     const items = [
         {
             icon: <StarIcon />,

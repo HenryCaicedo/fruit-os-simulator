@@ -1,14 +1,16 @@
-import './Navbar.css'
+import styles from './Navbar.module.css';
+import { AppTheme } from '../../../../../models/AppTheme';
 
 interface NavbarProps {
-    children: string
+    children: string,
+    appTheme?: AppTheme;
 }
 
-export default function Navbar(props: NavbarProps) {
+export default function Navbar({ children, appTheme = 'standard' }: NavbarProps) {
     return (
-        <div className="navbar-bg">
+        <div className={`${styles.navbarBg} ${styles[appTheme]}`}>
             <h1>
-                {props.children}
+                {children}
             </h1>
         </div>
     );

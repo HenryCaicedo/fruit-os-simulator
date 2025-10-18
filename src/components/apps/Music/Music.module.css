@@ -3,6 +3,8 @@
     flex-direction: column;
     height: 100%;
     width: 100%;
+    background-color: #e9eaec;
+
 }
 
 .content {
@@ -10,4 +12,10 @@
     display: flex;
     flex-direction: column;
     overflow: auto;
+}
+
+.icon {
+    width: 44px;
+    height: 44px;
+    opacity: 0.5;
 }

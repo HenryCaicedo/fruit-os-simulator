@@ -5,6 +5,8 @@ import ContactsList from "../Phone/sections/ContactsList";
 import SearchBar from "../../ui/SearchBar/SearchBar";
 import NavbarTemplate from "../../ui/screens/NavbarTemplate/NavbarTemplate";
 import BottomNavigation from "../../ui/BottomNavigation/BottomNavigation";
+import Artists from "./tabs/Artists/Artists";
+import { PlaylistsIcon, ArtistsIcon, SongsIcon, AlbumsIcon, MoreIcon } from "./assets/icons";
 
 export default function Music() {
     const [query, setQuery] = useState("");
@@ -14,29 +16,29 @@ export default function Music() {
 
     const items = [
         {
-            icon: <ListMusic />,
+            icon: <PlaylistsIcon />,
             label: 'Playlists',
             key: 'playlists',
             disabled: true
         },
         {
-            icon: <SquareUserRound />,
+            icon: <ArtistsIcon />,
             label: 'Artists',
             key: 'artists',
             disabled: true
         },
         {
-            icon: <Music2 />,
+            icon: <SongsIcon />,
             label: 'Songs',
             key: 'songs'
         },
         {
-            icon: <DiscAlbum />,
+            icon: <AlbumsIcon />,
             label: 'Albums',
             key: 'albums'
         },
         {
-            icon: <Ellipsis />,
+            icon: <MoreIcon />,
             label: 'More',
             key: 'more',
             disabled: true
@@ -45,13 +47,12 @@ export default function Music() {
 
 
     return (
-        <NavbarTemplate title="Artists">
+        <NavbarTemplate title="Artists" appTheme="music" rounded={true}>
             <div className={styles.container}>
                 <div className={styles.content}>
-                    <SearchBar value={query} onChange={setQuery} />
-                    <ContactsList searchQuery={query} />
+                    <Artists />
                 </div>
-                <BottomNavigation items={items} selectedKey={'artists'} />
+                <BottomNavigation items={items} selectedKey={'artists'} appTheme="music" />
             </div>
         </NavbarTemplate>
     );

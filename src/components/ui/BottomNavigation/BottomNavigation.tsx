@@ -1,4 +1,5 @@
 import style from './BottomNavigation.module.css';
+import { AppTheme } from '../../../models/AppTheme';
 
 interface BottomNavigationProps {
     selectedKey?: string | number | null;
@@ -7,13 +8,14 @@ interface BottomNavigationProps {
         label: string;
         key: string;
         disabled?: boolean;
-    }>
+    }>,
+    appTheme?: AppTheme;
 }
 
-export default function BottomNavigation({ items, selectedKey }: BottomNavigationProps) {
+export default function BottomNavigation({ items, selectedKey, appTheme = 'standard' }: BottomNavigationProps) {
     return (
         <div
-            className={style.container}
+            className={`${style.container} ${style[appTheme]}`}
             style={{
                 display: 'grid',
                 gridTemplateColumns: `repeat(${items.length}, 1fr)`,
