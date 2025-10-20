@@ -10,9 +10,10 @@ interface BottomNavigationProps {
         disabled?: boolean;
     }>,
     appTheme?: AppTheme;
+    onItemClick?: (key: string) => void;
 }
 
-export default function BottomNavigation({ items, selectedKey, appTheme = 'standard' }: BottomNavigationProps) {
+export default function BottomNavigation({ items, selectedKey, appTheme = 'standard', onItemClick }: BottomNavigationProps) {
     return (
         <div
             className={`${style.container} ${style[appTheme]}`}
@@ -27,6 +28,11 @@ export default function BottomNavigation({ items, selectedKey, appTheme = 'stand
                     ${item.disabled ? style.disabled : ''}
                     ${item.key === selectedKey ? style.isSelected : ''}
                     `.trim()}
+                    onClick={() => {
+                        if (!item.disabled && typeof item.key === 'string' && typeof onItemClick === 'function') {
+                            onItemClick(item.key);
+                        }
+                    }}
                 >
                     <span className={style.icon}>{item.icon}</span>
                     <span className={item.key === selectedKey ? style.isLabelSelected : ''}>{item.label}</span>

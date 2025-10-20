@@ -2,6 +2,7 @@
     height: 60px;
     background: linear-gradient(to bottom, hsl(0, 0%, 27%) 0%, #222222 50%, #0d0d0d 50%);
     box-shadow: 0 -1px 6px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .item {
@@ -24,9 +25,12 @@
     align-items: center;
 }
 
+.standard path {
+    fill: #A0A0A0;
+}
+
 .standard .isSelected path {
     fill: #6db7f4;
-    stroke: #6db7f4;
 }
 
 .isSelected {
@@ -60,6 +64,7 @@
     margin: 0px;
     border-radius: 0px;
     border-right: 0px;
+    border-left: 0px;
     box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.55);
     background: linear-gradient(#b1b1b1, #dbdbdb);
 }
@@ -67,4 +72,3 @@
 .music .item span {
     color: #525252 !important;
 }
-

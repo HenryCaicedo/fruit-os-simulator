@@ -1,0 +1,69 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #BAB7B6;
+}
+
+.display {
+    height: 110px;
+    background: linear-gradient(#8196B3, #718AA9, #435D7D);
+    font-size: 2rem;
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 16px;
+    letter-spacing: 1px;
+    overflow-x: auto;
+    position: relative;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    border-radius: 30px;
+    flex: 1;
+    gap: 3px;
+    margin: 3px 2px;
+}
+
+.actions {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+
+/* BUTTONS WRAPPER */
+.buttonWrapper {
+    background: linear-gradient(#E5E5E5, #F1F1F1);
+    color: #4B4B4B;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+.buttonWrapper > h1 {
+    font-size: 2.2rem;
+    font-weight: normal;
+}
+
+.buttonWrapper > span {
+    opacity: 0.8;
+}
+
+.callButton {
+    background: linear-gradient(#23b510, #1EBF11, #23b510);
+    color: white;
+    margin: 5px 0px;
+    border: 1.2px solid #466250;
+    box-shadow: inset 0 0px 1px 1px rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
+}

@@ -1,59 +1,42 @@
 import styles from "./Music.module.css";
-import { useEffect, useState } from "react";
-import { ListMusic, SquareUserRound, Music2, DiscAlbum, Ellipsis, Square } from "lucide-react";
-import ContactsList from "../Phone/sections/ContactsList";
-import SearchBar from "../../ui/SearchBar/SearchBar";
+import { useLocation, useNavigate, Outlet } from "react-router-dom";
 import NavbarTemplate from "../../ui/screens/NavbarTemplate/NavbarTemplate";
 import BottomNavigation from "../../ui/BottomNavigation/BottomNavigation";
-import Artists from "./tabs/Artists/Artists";
 import { PlaylistsIcon, ArtistsIcon, SongsIcon, AlbumsIcon, MoreIcon } from "./assets/icons";
 
 export default function Music() {
-    const [query, setQuery] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const currentTab = location.pathname.split("/").pop() || "artists";
 
-    useEffect(() => {
-    }, [query]);
+  const items = [
+    { icon: <PlaylistsIcon />, label: "Playlists", key: "playlists" },
+    { icon: <ArtistsIcon />, label: "Artists", key: "artists" },
+    { icon: <SongsIcon />, label: "Songs", key: "songs" },
+    { icon: <AlbumsIcon />, label: "Albums", key: "albums" },
+    { icon: <MoreIcon />, label: "More", key: "more" },
+  ];
 
-    const items = [
-        {
-            icon: <PlaylistsIcon />,
-            label: 'Playlists',
-            key: 'playlists',
-            disabled: true
-        },
-        {
-            icon: <ArtistsIcon />,
-            label: 'Artists',
-            key: 'artists',
-            disabled: true
-        },
-        {
-            icon: <SongsIcon />,
-            label: 'Songs',
-            key: 'songs'
-        },
-        {
-            icon: <AlbumsIcon />,
-            label: 'Albums',
-            key: 'albums'
-        },
-        {
-            icon: <MoreIcon />,
-            label: 'More',
-            key: 'more',
-            disabled: true
-        }
-    ];
+  const handleItemClick = (key: string) => {
+    navigate(`/music/${key}`);
+  };
 
+  const currentLabel =
+    items.find((item) => item.key === currentTab)?.label || "Music";
 
-    return (
-        <NavbarTemplate title="Artists" appTheme="music" rounded={true}>
-            <div className={styles.container}>
-                <div className={styles.content}>
-                    <Artists />
-                </div>
-                <BottomNavigation items={items} selectedKey={'artists'} appTheme="music" />
-            </div>
-        </NavbarTemplate>
-    );
+  return (
+    <NavbarTemplate title={currentLabel} appTheme="music" rounded={true}>
+      <div className={styles.container}>
+        <div className={styles.content}>
+          <Outlet />
+        </div>
+        <BottomNavigation
+          items={items}
+          selectedKey={currentTab}
+          appTheme="music"
+          onItemClick={handleItemClick}
+        />
+      </div>
+    </NavbarTemplate>
+  );
 }

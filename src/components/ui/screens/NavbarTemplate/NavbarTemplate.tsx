@@ -9,15 +9,16 @@ interface NavbarTemplateProps {
   title: string;
   children?: React.ReactNode;
   rounded?: boolean;
+  hideNavbar?: boolean;
 }
 
-export default function NavbarTemplate({ appTheme = 'standard', title, children, rounded=false }: NavbarTemplateProps) {
+export default function NavbarTemplate({ appTheme = 'standard', title, children, rounded=false, hideNavbar=false }: NavbarTemplateProps) {
   const StatusBarColor = appTheme == "music" ? "black" : "#345789c3";
 
   return (
     <div className="navbar-template">
       <StatusBarBackground color={StatusBarColor} />
-      <Navbar appTheme={appTheme}>{title}</Navbar>
+      {!hideNavbar && <Navbar appTheme={appTheme}>{title}</Navbar>}
       <div className="screen-container">
         {children}
       </div>

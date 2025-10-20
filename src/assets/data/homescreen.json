@@ -64,7 +64,7 @@
             {
                 "name": "Contacts",
                 "icon": "Contacts",
-                "route": "contacts",
+                "route": "dialer/contacts",
                 "applyMask": false
             },
             {
@@ -80,7 +80,7 @@
         {
             "name": "Phone",
             "icon": "Phone",
-            "route": "phone",
+            "route": "dialer/keypad",
             "applyMask": false
         },
         {
