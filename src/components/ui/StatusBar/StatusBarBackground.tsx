@@ -1,9 +1,9 @@
 import React from 'react';
-import './StatusBar.css';
+import styles from './StatusBar.module.css';
 
 
 export default function StatusBarBackground({color }: {color?: string}) {
     return (
-        <div className="status-bar-height" style={{ backgroundColor: color }}></div>
+        <div className={styles.statusBarHeight} style={{ backgroundColor: color }}></div>
     );
 }

@@ -1,4 +1,4 @@
-.status-bar {
+.statusBar {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
@@ -12,11 +12,11 @@
   text-shadow: #333333b9 0px -1px 0px;
 }
 
-.status-bar-height {
+.statusBarHeight {
   height: 25px;
 }
 
-.status-bar span {
+.statusBar span {
   display: flex;
   align-items: center;
   gap: 4px;

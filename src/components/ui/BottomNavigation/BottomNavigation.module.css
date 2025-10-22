@@ -38,7 +38,7 @@
 .standard .isSelected {
     background-color: rgba(255, 255, 255, 0.2);
     margin: 2px 6px;
-    border-radius: 8px;
+    border-radius: 5px;
     transition: background-color 0.5s ease;
 
 }

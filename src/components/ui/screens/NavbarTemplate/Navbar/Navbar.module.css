@@ -1,13 +1,16 @@
 .navbarBg {
-    background: linear-gradient(#beccdd, #5a7498);
+    background: linear-gradient(#bdc8d8,#a3b3c9,#8fa2be,#728aa9,#5d779b);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    height: 36px;
     color: white;
     padding: 8px;
-    text-align: center;
     position: sticky;
     top: 0;
     border-bottom: #3f5c80 solid 2px;
     box-shadow: inset 0 1px 1px 0px rgba(255, 255, 255, 0.5),
         0 1px 2px 0px rgba(0, 0, 0, 0.3);
+
 }
 
 .navbarBg h1 {
@@ -15,8 +18,50 @@
     font-weight: 600;
     margin: 0;
     text-shadow: #333333b9 0px -1.6px 0px;
+    text-align: center;
 }
 
+.leftButton {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.rightButton {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navBarbutton {
+    background: linear-gradient(#78879B, #7B91AB, #537095, #44638E);
+    color: white;
+    font-weight: 550;
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    box-shadow: inset 0 0.7px 0.5px 0.5px rgba(0, 0, 0, 0.5),
+        0 1px 0.5px 0px rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    /* inner bottom "border" using an inset box-shadow so it sits inside the button.
+        Reduce 1000px to the height you actually need. */
+    box-shadow: inset 0 -0.2px 0.5px 0.5px rgba(0, 0, 0, 0.3),
+         inset 0 0.7px 0.5px 0.5px rgba(0, 0, 0, 0.3),
+         0 1.5px 0.6px 0px rgba(255, 255, 255, 0.3);
+    text-shadow: #333333b9 0px -1px 0px;
+    height: 100%;
+    margin: 4px 0px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navBarbutton svg,
+.navBarbutton img {
+    max-height: 20px;
+    max-width: 20px;
+    flex-shrink: 0;
+}
 
 /* MUSIC APP THEME*/
 .navbarBg.music {

@@ -1,18 +1,24 @@
 import styles from "./DirectoryList.module.css";
 import { AppTheme } from "../../../models/AppTheme";
 
+interface item {
+    id: string | number;
+    label: string;
+    detail?: string;
+}
+
 interface DirectoryListProps {
     appTheme?: AppTheme;
     searchQuery?: string;
-    items: {
-        id: string | number;
-        label: string;
-    }[];
+    showLetterHeaders?: boolean;
+    boldTitles?: boolean;
+    leftContent?: React.ReactNode;
+    rightContent?: React.ReactNode;
+    items: item[];
 }
 
-export default function DirectoryList({ items, searchQuery, appTheme = 'standard' }: DirectoryListProps) {
+export default function DirectoryList({ items, searchQuery, appTheme = 'standard', showLetterHeaders = true, boldTitles = false, leftContent, rightContent }: DirectoryListProps) {
 
-    // Filter, sort and group by first letter
     const filteredItems = searchQuery
         ? items.filter((item) =>
             item.label.toLowerCase().includes(searchQuery.toLowerCase())
@@ -21,7 +27,7 @@ export default function DirectoryList({ items, searchQuery, appTheme = 'standard
 
     const grouped = [...filteredItems]
         .sort((a, b) => a.label.localeCompare(b.label))
-        .reduce<Record<string, { id: string | number; label: string }[]>>(
+        .reduce<Record<string, item[]>>(
             (acc, item) => {
                 const letter = item.label.trim().charAt(0).toUpperCase() || "";
                 if (!acc[letter]) acc[letter] = [];
@@ -35,14 +41,25 @@ export default function DirectoryList({ items, searchQuery, appTheme = 'standard
         <div className={styles.container}>
             {Object.entries(grouped).map(([letter, group]) => (
                 <div key={letter}>
-                    <div
-                        className={`${styles.letterHeader} ${styles[appTheme]}`}
-                    >
-                        {letter}
-                    </div>
+                    {showLetterHeaders && (
+                        <div
+                            className={`${styles.letterHeader} ${styles[appTheme]}`}
+                        >
+                            {letter}
+                        </div>
+                    )}
                     {group.map((item) => (
                         <div key={item.id} className={`${styles.listItem} ${styles[appTheme]}`}>
-                            {item.label}
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                {leftContent}
+                                {boldTitles ? <strong>{item.label}</strong> : item.label}
+                            </div>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                {item.detail && (
+                                    <small className={styles.itemDetail}>{item.detail}</small>
+                                )}
+                                {rightContent}
+                            </div>
                         </div>
                     ))}
                 </div>

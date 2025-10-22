@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Signal, Battery, Wifi } from "lucide-react";
-import "./StatusBar.css";
+import styles from "./StatusBar.module.css";
 
 function getCurrentTime() {
   const now = new Date();
@@ -23,18 +23,18 @@ export default function StatusBar() {
   }, []);
 
   return (
-    <div className="status-bar status-bar-height">
-      <span className="carrier">
+    <div className={`${styles.statusBar} ${styles.statusBarHeight}`}>
+      <span className={styles.carrier}>
         {/*
         <Signal size={16} style={{ verticalAlign: "middle", marginRight: 4 }} />
         */}
         No Service
         <Wifi size={16} style={{ verticalAlign: "middle", marginRight: 4 }} />
       </span>
-      <span className="time">
+      <span className={styles.time}>
         {time}
       </span>
-      <span className="battery">
+      <span className={styles.battery}>
         {`${Math.round(
           ((24 * 60 - (new Date().getHours() * 60 + new Date().getMinutes())) / (24 * 60)) * 100
         )}%`}

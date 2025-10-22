@@ -1,4 +1,5 @@
 import localData from "../assets/data/contacts.json";
+import { Contact } from "../models/DTOs/Contact";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -15,4 +16,8 @@ export async function getContactsData() {
     console.error("HomescreenService error:", error);
     throw error;
   }
+}
+
+export async function getFavoriteContacts() {
+  return localData.filter(contact => contact.favorite);
 }
